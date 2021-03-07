@@ -1,6 +1,6 @@
  <template>
   <span class="i-icon">
-        <%= svgTpl %>) 
+        <%= svgTpl %>
   </span>
 </template>
 <script>

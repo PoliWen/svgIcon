@@ -1,13 +1,18 @@
 import close from './src/components/close'
 import leftArrow from './src/components/leftArrow'
 import camera from './src/components/camera'
-const tw591SVGIcon = {
-  'close':close,
-  'leftArrow':leftArrow,
-  'camera':camera
+let tw591SVGIcon = {
+  'close': close,
+  'leftArrow': leftArrow,
+  'camera': camera
 }
+const {
+  iconCon
+} = require('./build/config')
 
-const install = function(Vue) {
+
+
+const install = function (Vue) {
   if (install.installed) return
   Object.keys(tw591SVGIcon).forEach(key => {
     Vue.component(key, tw591SVGIcon[key])
