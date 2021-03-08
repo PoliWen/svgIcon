@@ -3,23 +3,37 @@
 <script src="https://unpkg.com/vue"></script>
 <script src="./tw591SVGIcon.umd.js"></script>
 
+<style lang="">
+    .i-icon {
+        vertical-align: top;
+        display: inline-block;
+    }
+</style>
 
-<link rel="stylesheet" href="./tw591SVGIcon.css">
 
 <html>
-    <body>
-        <div id="app">
-            <icon-close fill='red' size='10rem'></icon-close>
-            <icon-close fill='#666' size='10rem'></icon-close>
-            <icon-left-arrow fill='#666' size='10rem'></icon-left-arrow>
-            <icon-right-arrow fill='#666' size='10rem'></icon-right-arrow>
-            <icon-filter fill='red' size='10rem'></icon-filter>
+
+<body>
+    <div id="app">
+        <icon-close fill='blue' size='5rem'></icon-close>
+        <icon-close fill='#666' size='5rem'></icon-close>
+        <div>
+            <icon-left-arrow fill='#999' size='5em'></icon-left-arrow>
         </div>
-    </body>
+
+        <div class="filter">
+            <icon-filter fill='red' size='5em'></icon-filter>
+        </div>
+
+        <icon-right-arrow fill='#666' size='5rem'></icon-right-arrow>
+
+    </div>
+</body>
+
 </html>
 <script>
     const app = new Vue({
-        el:'#app'
+        el: '#app'
     })
-console.log(tw591SVGIcon)
+    console.log(tw591SVGIcon)
 </script>

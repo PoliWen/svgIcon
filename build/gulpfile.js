@@ -3,7 +3,13 @@
  * @author: wenxiaoli<10800>
  * @create: 2021-03-05 13:54:55
  */
-const {task,src,series,parallel,dest} = require('gulp');
+const {
+    task,
+    src,
+    series,
+    parallel,
+    dest
+} = require('gulp');
 const path = require('path');
 const fs = require('fs')
 const rename = require('gulp-rename')
@@ -11,7 +17,9 @@ const through = require('through2')
 const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
 const beautifyjs = require('gulp-beautify')
-let { iconCon } = require('./config')
+let {
+    iconCon
+} = require('./config')
 
 const fontDir = path.join(__dirname, '../src/font');
 const vueComDir = path.join(__dirname, '../src/iconCom'); //字体组件库路径
@@ -23,7 +31,7 @@ const formats = ['ttf', 'woff', 'woff2'];
 const fontName = '591SvgIcon'
 
 //首字母大小
-function capitalize(string){
+function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
@@ -45,40 +53,39 @@ task('buildVueCom', done => {
             }))
             .pipe(rename(`icon${capitalize(item)}.vue`))
             .pipe(dest(vueComDir))
-            .pipe(dest(vueComDir))
     })
     done()
 })
 
 
 //更新npm 安装包js installjs
-task('updateInstallJs',done=>{
+task('updateInstallJs', done => {
     src('./index.tpl')
-    .pipe(through.obj(function (file, encode, cb) {
-        let result = file.contents.toString()
-        let importCom = ''
-        
-        let iconComCon = iconCon.map(item => {
-            return `icon${capitalize(item)}`
-        })
+        .pipe(through.obj(function (file, encode, cb) {
+            let result = file.contents.toString()
+            let importCom = ''
 
-        iconComCon.forEach(item=>{
-            importCom+=`import ${item} from './src/iconCom/${item}.vue'\n`
-        })
+            let iconComCon = iconCon.map(item => {
+                return `icon${capitalize(item)}`
+            })
 
-        let tw591SVGIcon=`
+            iconComCon.forEach(item => {
+                importCom += `import ${item} from './src/iconCom/${item}.vue'\n`
+            })
+
+            let tw591SVGIcon = `
             const tw591SVGIcon = {
                 ${iconComCon}
             }
         `
-        result = importCom + tw591SVGIcon + result
-        file.contents = new Buffer(result)
-        this.push(file)
-        cb()
-    }))
-    .pipe(rename('index.js'))
-    .pipe(beautifyjs())
-    .pipe(dest('../'))
+            result = importCom + tw591SVGIcon + result
+            file.contents = new Buffer(result)
+            this.push(file)
+            cb()
+        }))
+        .pipe(rename('index.js'))
+        .pipe(beautifyjs())
+        .pipe(dest('../'))
     done()
 })
 
@@ -87,7 +94,8 @@ task('updateInstallJs',done=>{
  */
 function cleanSvgTpl(svgTpl) {
     let str = svgTpl.replace(/^(<\?.*)px"/g, "<svg :width='size' :height='size'")
-    str = str.replace(/fill.*d/, ":fill='fill' d")
+    str = str.replace(/(xmlns.*svg")/g, '')
+    str = str.replace(/fill="#\d{6}"/g, ':fill="fill"')
     return str
 }
 
@@ -113,4 +121,4 @@ function font() {
         .pipe(dest(fontDir));
 }
 
-task('default', series(parallel('buildVueCom','updateInstallJs'), font));
+task('default', series(parallel('buildVueCom', 'updateInstallJs'), font));
