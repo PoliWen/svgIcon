@@ -12,8 +12,8 @@ export default {
     },
     fill:{
       type:String,
-      default:'red'
+      default:'#333'
     }
   }
 };
-</script>cnmb
+</script>

@@ -1,22 +1,19 @@
 const iconCon = [
-    'anquanjisu',
-    'dingwei',
-    'gouwuche',
-    'huiyuan',
-    'liebiao',
-    'saoyisao',
-    'shijian',
-    'sort_icon',
-    'sousuo',
-    'tianjia',
-    'tubiao_fanhuidingbu',
-    'tupian',
-    'tupian1',
-    'wendangbianji',
-    'xiangji',
-    'xuanzhong',
-    'zhiding',
-    'zuojiantou'
+    'category',
+    'circleClose',
+    'close',
+    'downArrow',
+    'gotoTop',
+    'heart',
+    'iconPhone',
+    'leftArrow',
+    'rightArrow',
+    'search',
+    'filter',
+    'share',
+    'sort',
+    'upArrow',
+    'userCenter'
 ]
 
-exports.iconCon = iconCon
+module.exports.iconCon = iconCon

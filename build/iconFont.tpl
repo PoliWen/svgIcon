@@ -12,7 +12,7 @@ export default {
     },
     fill:{
       type:String,
-      default:'red'
+      default:'#333'
     }
   }
 };

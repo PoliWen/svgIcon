@@ -1,10 +1,25 @@
 <meta charset="utf-8">
 <title>tw591SVGIcon demo</title>
+<script src="https://unpkg.com/vue"></script>
 <script src="./tw591SVGIcon.umd.js"></script>
+
 
 <link rel="stylesheet" href="./tw591SVGIcon.css">
 
-
+<html>
+    <body>
+        <div id="app">
+            <icon-close fill='red' size='10rem'></icon-close>
+            <icon-close fill='#666' size='10rem'></icon-close>
+            <icon-left-arrow fill='#666' size='10rem'></icon-left-arrow>
+            <icon-right-arrow fill='#666' size='10rem'></icon-right-arrow>
+            <icon-filter fill='red' size='10rem'></icon-filter>
+        </div>
+    </body>
+</html>
 <script>
+    const app = new Vue({
+        el:'#app'
+    })
 console.log(tw591SVGIcon)
 </script>

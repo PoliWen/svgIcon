@@ -4,27 +4,7 @@
 		<HelloWorld msg="svg字体图标" />
 		<hr />
 		<h3>自定义字体图标</h3>
-		<close fill="#333" size="10rem" strokeLinecap="butt" />
-		<close fill="red" size="10rem" strokeLinecap="round" />
-		<close
-			fill="blue"
-			size="10rem"
-			strokeLinecap="square"
-			strokeLinejoin="square"
-		/>
-		<anquanjisu fill="blue" size="10rem" />
-		<camera
-			fill="red"
-			size="10rem"
-			strokeLinecap="butt"
-			strokeLinejoin="butt"
-		/>
-		<leftArrow
-			fill="#333"
-			size="12rem"
-			strokeLinecap="butt"
-			strokeLinejoin="butt"
-		/>
+		<iconCategory size='2rem'/>
 		<hr />
 		<h3>iconPark库字体图标</h3>
 		<iconPark />
@@ -39,9 +19,11 @@ import HelloWorld from './components/HelloWorld.vue'
 import close from './components/close.vue'
 import leftArrow from './components/leftArrow.vue'
 import camera from './components/camera.vue'
-import anquanjisu from './com/anquanjisu.vue'
 import iconPark from './components/iconPark.vue'
 import aliIconFont from './components/aliIconFont.vue'
+
+//字体图标库
+import iconCategory from './iconCom/icon-category.vue'
 
 export default {
 	name: 'App',
@@ -52,7 +34,7 @@ export default {
 		aliIconFont,
 		camera,
 		leftArrow,
-		anquanjisu,
+		iconCategory
 	},
 }
 </script>

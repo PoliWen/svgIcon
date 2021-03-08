@@ -22,74 +22,63 @@
   }
 }
 
-.tw591-icon-anquanjisu:before {
+.tw591-icon-category:before {
   content: "\F000";
 }
 
-.tw591-icon-dingwei:before {
+.tw591-icon-circleClose:before {
   content: "\F001";
 }
 
-.tw591-icon-gouwuche:before {
+.tw591-icon-close:before {
   content: "\F002";
 }
 
-.tw591-icon-huiyuan:before {
+.tw591-icon-downArrow:before {
   content: "\F003";
 }
 
-.tw591-icon-liebiao:before {
+.tw591-icon-filter:before {
   content: "\F004";
 }
 
-.tw591-icon-saoyisao:before {
+.tw591-icon-gotoTop:before {
   content: "\F005";
 }
 
-.tw591-icon-shijian:before {
+.tw591-icon-heart:before {
   content: "\F006";
 }
 
-.tw591-icon-sort_icon:before {
+.tw591-icon-iconPhone:before {
   content: "\F007";
 }
 
-.tw591-icon-sousuo:before {
+.tw591-icon-leftArrow:before {
   content: "\F008";
 }
 
-.tw591-icon-tianjia:before {
+.tw591-icon-rightArrow:before {
   content: "\F009";
 }
 
-.tw591-icon-tubiao_fanhuidingbu:before {
+.tw591-icon-search:before {
   content: "\F00A";
 }
 
-.tw591-icon-tupian:before {
+.tw591-icon-share:before {
   content: "\F00B";
 }
 
-.tw591-icon-tupian1:before {
+.tw591-icon-sort:before {
   content: "\F00C";
 }
 
-.tw591-icon-wendangbianji:before {
+.tw591-icon-upArrow:before {
   content: "\F00D";
 }
 
-.tw591-icon-xiangji:before {
+.tw591-icon-userCenter:before {
   content: "\F00E";
 }
-
-.tw591-icon-xuanzhong:before {
-  content: "\F00F";
-}
-
-.tw591-icon-zhiding:before {
-  content: "\F010";
-}
-
-.tw591-icon-zuojiantou:before {
-  content: "\F011";
-}
+
