@@ -87,7 +87,8 @@ task('updateInstallJs',done=>{
  */
 function cleanSvgTpl(svgTpl) {
     let str = svgTpl.replace(/^(<\?.*)px"/g, "<svg :width='size' :height='size'")
-    str = str.replace(/fill.*d/, ":fill='fill' d")
+    str = str.replace(/fill=".\d{6}"/g, ":fill='fill'")
+    str = str.replace(/xmlns.*svg"/g, "")
     return str
 }
 
