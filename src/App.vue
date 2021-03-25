@@ -23,7 +23,7 @@ import iconPark from './components/iconPark.vue'
 import aliIconFont from './components/aliIconFont.vue'
 
 //字体图标库
-import iconCategory from './iconCom/icon-category.vue'
+import iconCategory from './iconCom/iconCategory.vue'
 
 export default {
 	name: 'App',
