@@ -22,63 +22,67 @@
   }
 }
 
-.tw591-icon-category:before {
+.icon-category:before {
   content: "\F000";
 }
 
-.tw591-icon-circleClose:before {
+.icon-circleClose:before {
   content: "\F001";
 }
 
-.tw591-icon-close:before {
+.icon-close:before {
   content: "\F002";
 }
 
-.tw591-icon-downArrow:before {
+.icon-downArrow:before {
   content: "\F003";
 }
 
-.tw591-icon-filter:before {
+.icon-filter:before {
   content: "\F004";
 }
 
-.tw591-icon-gotoTop:before {
+.icon-gotoTop:before {
   content: "\F005";
 }
 
-.tw591-icon-heart:before {
+.icon-heart:before {
   content: "\F006";
 }
 
-.tw591-icon-iconPhone:before {
+.icon-iconPhone:before {
   content: "\F007";
 }
 
-.tw591-icon-leftArrow:before {
+.icon-leftArrow:before {
   content: "\F008";
 }
 
-.tw591-icon-rightArrow:before {
+.icon-question:before {
   content: "\F009";
 }
 
-.tw591-icon-search:before {
+.icon-rightArrow:before {
   content: "\F00A";
 }
 
-.tw591-icon-share:before {
+.icon-search:before {
   content: "\F00B";
 }
 
-.tw591-icon-sort:before {
+.icon-share:before {
   content: "\F00C";
 }
 
-.tw591-icon-upArrow:before {
+.icon-sort:before {
   content: "\F00D";
 }
 
-.tw591-icon-userCenter:before {
+.icon-upArrow:before {
   content: "\F00E";
+}
+
+.icon-userCenter:before {
+  content: "\F00F";
 }
 

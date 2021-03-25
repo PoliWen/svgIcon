@@ -14,6 +14,7 @@ const sketch = require('gulp-sketch');  // gulp-sketch可以直接把sketch文�
 const iconfontCss = require('gulp-iconfont-css');
 const beautifyjs = require('gulp-beautify');
 const svgSprite = require('gulp-svg-sprite');
+const open = require('gulp-open'); //在瀏覽器打開網頁
 let { iconCon } = require('./config');
 
 const fontDir = path.join(__dirname, '../font/fonts');
@@ -125,17 +126,17 @@ function font() {
         )
         .on('glyphs', (glyphs) => {
             const options = {
-              className:'tw591-icon',
+              className:'icon',
               fontCssName:'iconFont',
               fontName,
               glyphs: glyphs.map(mapGlyphs)
             }
             src(`./template/fontDemo.tpl`)
               .pipe(consolidate('lodash', options))
-              .pipe(rename('fontDemo.html'))
+              .pipe(rename('index.html'))
               .pipe(dest('../font/')) 
         })
-        .pipe(dest(fontDir));
+        .pipe(dest(fontDir))
 }
 
 //generate svgSprite
@@ -162,6 +163,4 @@ task('sketch', done=>{
     done()
 });
 
-
 task('default', series(parallel('buildVueCom','updateInstallJs','sketch'), font, genSvgSprite))
-
