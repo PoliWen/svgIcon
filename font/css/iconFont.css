@@ -1,0 +1,88 @@
+/* stylelint-disable selector-pseudo-element-colon-notation */
+@font-face {
+  font-weight: normal;
+  font-family: '591SvgIcon';
+  font-style: normal;
+  font-display: auto;
+  src: url('../fonts/591SvgIcon.woff2') format('woff2'),
+    url('../fonts/591SvgIcon.woff') format('woff'),
+    url('../fonts/591SvgIcon.ttf') format('truetype');
+}
+
+.tw591-icon {
+  position: relative;
+  display: inline-block;
+  font: normal normal normal 14px/1 "591SvgIcon";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-size:16px;
+  &::before {
+    display: inline-block;
+  }
+}
+
+.icon-category:before {
+  content: "\F000";
+}
+
+.icon-circleClose:before {
+  content: "\F001";
+}
+
+.icon-close:before {
+  content: "\F002";
+}
+
+.icon-downArrow:before {
+  content: "\F003";
+}
+
+.icon-filter:before {
+  content: "\F004";
+}
+
+.icon-gotoTop:before {
+  content: "\F005";
+}
+
+.icon-heart:before {
+  content: "\F006";
+}
+
+.icon-iconPhone:before {
+  content: "\F007";
+}
+
+.icon-leftArrow:before {
+  content: "\F008";
+}
+
+.icon-question:before {
+  content: "\F009";
+}
+
+.icon-rightArrow:before {
+  content: "\F00A";
+}
+
+.icon-search:before {
+  content: "\F00B";
+}
+
+.icon-share:before {
+  content: "\F00C";
+}
+
+.icon-sort:before {
+  content: "\F00D";
+}
+
+.icon-upArrow:before {
+  content: "\F00E";
+}
+
+.icon-userCenter:before {
+  content: "\F00F";
+}
+

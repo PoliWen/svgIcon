@@ -4,9 +4,9 @@
   font-family: '<%= fontName %>';
   font-style: normal;
   font-display: auto;
-  src: url('<%= cssClass %>.woff2') format('woff2'),
-    url('<%= cssClass %>.woff') format('woff'),
-    url('<%= cssClass %>.ttf') format('truetype');
+  src: url('../fonts/<%= cssClass %>.woff2') format('woff2'),
+    url('../fonts/<%= cssClass %>.woff') format('woff'),
+    url('../fonts/<%= cssClass %>.ttf') format('truetype');
 }
 
 .tw591-icon {
@@ -16,13 +16,13 @@
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-
+  font-size:16px;
   &::before {
     display: inline-block;
   }
 }
 
-<% _.each(glyphs, function(glyph) { %>.tw591-icon-<%= glyph.fileName %>:before {
+<% _.each(glyphs, function(glyph) { %>.icon-<%= glyph.fileName %>:before {
   content: "\<%= glyph.codePoint %>";
 }
 
