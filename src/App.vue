@@ -5,6 +5,7 @@
 		<hr />
 		<h3>自定义字体图标</h3>
 		<iconCategory size='2rem'/>
+		<iconClose size='2rem'/>
 		<hr />
 		<h3>iconPark库字体图标</h3>
 		<iconPark />
@@ -16,20 +17,20 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import close from './components/close.vue'
+import iconClose from './iconCom/iconClose.vue'
 import leftArrow from './components/leftArrow.vue'
 import camera from './components/camera.vue'
 import iconPark from './components/iconPark.vue'
 import aliIconFont from './components/aliIconFont.vue'
 
 //字体图标库
-import iconCategory from './iconCom/icon-category.vue'
+import iconCategory from './iconCom/iconCategory.vue'
 
 export default {
 	name: 'App',
 	components: {
 		HelloWorld,
-		close,
+		iconClose,
 		iconPark,
 		aliIconFont,
 		camera,
