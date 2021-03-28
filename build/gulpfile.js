@@ -16,19 +16,14 @@ const rename = require('gulp-rename')
 const through = require('through2')
 const iconfont = require('gulp-iconfont');
 const consolidate = require('gulp-consolidate');
-const sketch = require('gulp-sketch');  // gulp-sketch可以直接把sketch文件转化成为font文件而无需导出SVG图标
+const sketch = require('gulp-sketch'); // gulp-sketch可以直接把sketch文件转化成为font文件而无需导出SVG图标
 const iconfontCss = require('gulp-iconfont-css');
-<<<<<<< HEAD
-const beautifyjs = require('gulp-beautify')
-let {
-    iconCon
-} = require('./config')
-=======
 const beautifyjs = require('gulp-beautify');
 const svgSprite = require('gulp-svg-sprite');
 const open = require('gulp-open'); //在瀏覽器打開網頁
-let { iconCon } = require('./config');
->>>>>>> 89146147dd1c711d59c9b6f39edd178eb2d705e5
+let {
+    iconCon
+} = require('./config');
 
 const fontDir = path.join(__dirname, '../font/fonts');
 const vueComDir = path.join(__dirname, '../src/iconCom'); //字体组件库路径
@@ -66,11 +61,20 @@ task('buildVueCom', done => {
     done()
 })
 
-
+/**
+ * 清洗svg模板
+ */
+function cleanSvgTpl(svgTpl) {
+    let str = svgTpl.replace(/<\?xml.*.dtd">/g, "")
+    str = str.replace(/(width=".*?")/g, ":width='size'")
+    str = str.replace(/(height=".*?")/g, ":height='size'")
+    str = str.replace(/(xmlns.*svg")/g, '')
+    str = str.replace(/fill="#.{6}"/g, ':fill="fill"')
+    return str
+}
 //更新npm 安装包js installjs
-<<<<<<< HEAD
 task('updateInstallJs', done => {
-    src('./index.tpl')
+    src('./template/entryIndexjs.tpl')
         .pipe(through.obj(function (file, encode, cb) {
             let result = file.contents.toString()
             let importCom = ''
@@ -78,65 +82,74 @@ task('updateInstallJs', done => {
             let iconComCon = iconCon.map(item => {
                 return `icon${capitalize(item)}`
             })
-=======
-task('updateInstallJs',done=>{
-    src('./template/entryIndexjs.tpl')
-    .pipe(through.obj(function (file, encode, cb) {
-        let result = file.contents.toString()
-        let importCom = ''
-        
-        let iconComCon = iconCon.map(item => {
-            return `icon${capitalize(item)}`
-        })
->>>>>>> 89146147dd1c711d59c9b6f39edd178eb2d705e5
+            console.log(iconComCon)
 
             iconComCon.forEach(item => {
                 importCom += `import ${item} from './src/iconCom/${item}.vue'\n`
             })
 
             let tw591SVGIcon = `
-            const tw591SVGIcon = {
-                ${iconComCon}
-            }
-        `
-<<<<<<< HEAD
+                const tw591SVGIcon = {
+                    ${iconComCon}
+                }
+            `
             result = importCom + tw591SVGIcon + result
-            file.contents = new Buffer(result)
+            file.contents = Buffer.from(result)
             this.push(file)
             cb()
         }))
         .pipe(rename('index.js'))
         .pipe(beautifyjs())
         .pipe(dest('../'))
-=======
-        result = importCom + tw591SVGIcon + result
-        file.contents = Buffer.from(result)
-        this.push(file)
-        cb()
-    }))
-    .pipe(rename('index.js'))
-    .pipe(beautifyjs())
-    .pipe(dest('../'))
->>>>>>> 89146147dd1c711d59c9b6f39edd178eb2d705e5
+    done()
+})
+
+//更新App.vue 生成demo演示文件
+task('buildDemo', done => {
+    src('./template/appDemo.tpl')
+        .pipe(through.obj(function (file, encode, cb) {
+            let result = file.contents.toString()
+
+            let iconComCon = iconCon.map(item => {
+                return `icon${capitalize(item)}`
+            })
+            console.log(iconComCon)
+
+            let importCom = ''
+            iconComCon.forEach(item => {
+                importCom += `import ${item} from './iconCom/${item}.vue'\n`
+            })
+
+            let demoHtml = ''
+            iconComCon.forEach(item => {
+                demoHtml += `<li>
+                    <span class="tw591-icon">
+                        <${item} />
+                    </span>
+                    <span class="icon-name">${item}</span>
+                </li>\n`
+            })
+
+            result = result.replace('<%= svgDemoHtml =%>', demoHtml)
+            result = result.replace('<%= importSvgCom =%>', importCom)
+            result = result.replace('<%= svgComConfig =%>', iconComCon)
+            file.contents = Buffer.from(result)
+            this.push(file)
+            cb()
+        }))
+        .pipe(rename('App.vue'))
+        .pipe(dest('../src/'))
     done()
 })
 
 /**
- * 清洗svg模板
- */
-function cleanSvgTpl(svgTpl) {
-    let str = svgTpl.replace(/^(<\?.*)px"/g, "<svg :width='size' :height='size'")
-    str = str.replace(/(xmlns.*svg")/g, '')
-    str = str.replace(/fill="#\d{6}"/g, ':fill="fill"')
-    return str
-}
-
-
-/**
  * This is needed for mapping glyphs and codepoints.
  */
-function mapGlyphs (glyph) {
-    return { name: glyph.name, codepoint: glyph.unicode[0].charCodeAt(0) }
+function mapGlyphs(glyph) {
+    return {
+        name: glyph.name,
+        codepoint: glyph.unicode[0].charCodeAt(0)
+    }
 }
 
 
@@ -161,45 +174,41 @@ function font() {
         )
         .on('glyphs', (glyphs) => {
             const options = {
-              className:'icon',
-              fontCssName:'iconFont',
-              fontName,
-              glyphs: glyphs.map(mapGlyphs)
+                className: 'icon',
+                fontCssName: 'iconFont',
+                fontName,
+                glyphs: glyphs.map(mapGlyphs)
             }
             src(`./template/fontDemo.tpl`)
-              .pipe(consolidate('lodash', options))
-              .pipe(rename('index.html'))
-              .pipe(dest('../font/')) 
+                .pipe(consolidate('lodash', options))
+                .pipe(rename('index.html'))
+                .pipe(dest('../font/'))
         })
         .pipe(dest(fontDir))
 }
 
-<<<<<<< HEAD
-task('default', series(parallel('buildVueCom', 'updateInstallJs'), font));
-=======
 //generate svgSprite
 const SvgConfig = {
     mode: {
-      symbol: true // Activate the «symbol» mode
+        symbol: true // Activate the «symbol» mode
     }
 }
 
-function genSvgSprite(){
-   return  src(`${svgDir}/*.svg`)
-           .pipe(svgSprite(SvgConfig))
-           .pipe(dest(fontDir));
+function genSvgSprite() {
+    return src(`${svgDir}/*.svg`)
+        .pipe(svgSprite(SvgConfig))
+        .pipe(dest(fontDir));
 }
 
 
-task('sketch', done=>{
+task('sketch', done => {
     src('../src/assets/*.sketch')
-      .pipe(sketch({
-        export: 'slices',
-        formats: 'png'
-      }))
-      .pipe(dest('../src/font/sketchSvg/'));
+        .pipe(sketch({
+            export: 'slices',
+            formats: 'png'
+        }))
+        .pipe(dest('../src/font/sketchSvg/'));
     done()
 });
 
-task('default', series(parallel('buildVueCom','updateInstallJs','sketch'), font, genSvgSprite))
->>>>>>> 89146147dd1c711d59c9b6f39edd178eb2d705e5
+task('default', series(parallel('buildVueCom', 'updateInstallJs', 'buildDemo'), font, genSvgSprite))

@@ -13,6 +13,7 @@ import iconShare from './src/iconCom/iconShare.vue'
 import iconSort from './src/iconCom/iconSort.vue'
 import iconUpArrow from './src/iconCom/iconUpArrow.vue'
 import iconUserCenter from './src/iconCom/iconUserCenter.vue'
+import iconQuestion from './src/iconCom/iconQuestion.vue'
 
 const tw591SVGIcon = {
     iconCategory,
@@ -29,10 +30,11 @@ const tw591SVGIcon = {
     iconShare,
     iconSort,
     iconUpArrow,
-    iconUserCenter
+    iconUserCenter,
+    iconQuestion
 }
 
-const install = function(Vue) {
+const install = function (Vue) {
     if (install.installed) return
     Object.keys(tw591SVGIcon).forEach(key => {
         Vue.component(key, tw591SVGIcon[key])

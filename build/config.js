@@ -13,7 +13,8 @@ const iconCon = [
     'share',
     'sort',
     'upArrow',
-    'userCenter'
+    'userCenter',
+    'question'
 ]
 
 module.exports.iconCon = iconCon
