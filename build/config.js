@@ -1,5 +1,5 @@
 const iconCon = [
-    'category',
+    'menu',
     'circleClose',
     'close',
     'downArrow',

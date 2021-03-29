@@ -1,1 +1,11 @@
-<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="icon" width="200px" height="200.00px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path fill="#333333" d="M710.4 838.4 358.4 492.8c-12.8-12.8-32-12.8-44.8 0l0 0c-12.8 12.8-12.8 32 0 44.8l352 352c12.8 12.8 32 12.8 44.8 0l0 0C723.2 876.8 723.2 851.2 710.4 838.4z"  /><path fill="#333333" d="M358.4 531.2l352-352c12.8-12.8 12.8-32 0-44.8l0 0c-12.8-12.8-32-12.8-44.8 0L313.6 486.4c-12.8 12.8-12.8 32 0 44.8l0 0C326.4 544 345.6 544 358.4 531.2z"  /></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="20px" viewBox="0 0 11 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>箭頭</title>
+    <desc>Created with Sketch.</desc>
+    <g id="-控件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="591icon-svg格式" transform="translate(-247.000000, -24.000000)" fill="#666666" fill-rule="nonzero">
+            <path d="M257.707107,25.7071068 C258.097631,25.3165825 258.097631,24.6834175 257.707107,24.2928932 C257.316582,23.9023689 256.683418,23.9023689 256.292893,24.2928932 L247.292893,33.2928932 C246.902369,33.6834175 246.902369,34.3165825 247.292893,34.7071068 L256.292893,43.7071068 C256.683418,44.0976311 257.316582,44.0976311 257.707107,43.7071068 C258.097631,43.3165825 258.097631,42.6834175 257.707107,42.2928932 L249.414214,34 L257.707107,25.7071068 Z" id="Path-11"></path>
+        </g>
+    </g>
+</svg>

@@ -1,1 +1,20 @@
-<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="icon" width="200px" height="200.00px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path fill="#333333" d="M381.17 13.21A27.74 27.74 0 0 0 350 24.39L127.78 357.71A27.78 27.78 0 1 0 174 388.53l171.33-257v852.69a27.78 27.78 0 1 0 55.55 0V39.79a27.78 27.78 0 0 0-19.71-26.58zM888.51 627.78a27.77 27.77 0 0 0-38.52 7.7l-171.33 257V39.79a27.78 27.78 0 0 0-55.55 0v944.43a27.78 27.78 0 0 0 19.72 26.58 27.48 27.48 0 0 0 8.06 1.19A27.77 27.77 0 0 0 674 999.63L896.22 666.3a27.76 27.76 0 0 0-7.71-38.52z" /></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="13px" viewBox="0 0 11 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>排序</title>
+    <desc>Created with Sketch.</desc>
+    <g id="-控件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="591icon-svg格式" transform="translate(-163.000000, -25.000000)" fill="#222222">
+            <g id="排序-2" transform="translate(163.000000, 25.000000)">
+                <g id="排序">
+                    <g id="Group-4" transform="translate(7.000000, 0.000000)">
+                        <path d="M0,0 L2,0 L2,8.999 L4,9 L0,13 L0,0 Z" id="形状结合"></path>
+                    </g>
+                    <g id="Group-4-Copy" transform="translate(2.000000, 6.500000) scale(-1, -1) translate(-2.000000, -6.500000) ">
+                        <path d="M5.55111512e-16,0 L2,0 L2,8.999 L4,9 L4.4408921e-16,13 L5.55111512e-16,0 Z" id="形状结合"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

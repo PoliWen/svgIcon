@@ -16,18 +16,19 @@ const rename = require('gulp-rename')
 const through = require('through2')
 const iconfont = require('gulp-iconfont');
 const consolidate = require('gulp-consolidate');
-const sketch = require('gulp-sketch'); // gulp-sketch可以直接把sketch文件转化成为font文件而无需导出SVG图标
 const iconfontCss = require('gulp-iconfont-css');
 const beautifyjs = require('gulp-beautify');
 const svgSprite = require('gulp-svg-sprite');
-const open = require('gulp-open'); //在瀏覽器打開網頁
+
+const svgmin = require('gulp-svgmin');
+
 let {
     iconCon
 } = require('./config');
 
 const fontDir = path.join(__dirname, '../font/fonts');
 const vueComDir = path.join(__dirname, '../src/iconCom'); //字体组件库路径
-const svgDir = path.join(__dirname, '../svgSource/'); //svg
+const svgDir = path.join(__dirname, '../svgMin/'); //svg
 const vueComTpl = path.join(__dirname, './template/vueCom.tpl');
 const fontLessTpl = path.join(__dirname, './template/fontLess.tpl');
 
@@ -61,6 +62,21 @@ task('buildVueCom', done => {
     done()
 })
 
+
+/**
+ * 压缩svg
+ */
+task('svgClean', done => {
+    return src('../svgSource/*.svg')
+        .pipe(svgmin({
+            plugins: [{
+                removeViewBox: false
+            }]
+        }))
+        .pipe(dest('../svgMin'));
+    done()
+})
+
 /**
  * 清洗svg模板
  */
@@ -69,9 +85,10 @@ function cleanSvgTpl(svgTpl) {
     str = str.replace(/(width=".*?")/g, ":width='size'")
     str = str.replace(/(height=".*?")/g, ":height='size'")
     str = str.replace(/(xmlns.*svg")/g, '')
-    str = str.replace(/fill="#.{6}"/g, ':fill="fill"')
+    str = str.replace(/fill="#.{0,6}"/g, ':fill="fill"')
     return str
 }
+
 //更新npm 安装包js installjs
 task('updateInstallJs', done => {
     src('./template/entryIndexjs.tpl')
@@ -211,4 +228,9 @@ task('sketch', done => {
     done()
 });
 
-task('default', series(parallel('buildVueCom', 'updateInstallJs', 'buildDemo'), font, genSvgSprite))
+//gulp.series 是串行，gulp.parallel是并行
+task('default', series('svgClean', 'buildVueCom',
+    parallel('updateInstallJs', 'buildDemo'),
+    font,
+    genSvgSprite
+))

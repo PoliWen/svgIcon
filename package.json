@@ -33,6 +33,7 @@
     "gulp-open": "^3.0.1",
     "gulp-sketch": "^1.0.5",
     "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^3.0.0",
     "less": "^4.1.1",
     "less-loader": "^5.0.0",
     "style-loader": "^2.0.0",

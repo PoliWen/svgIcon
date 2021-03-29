@@ -1,4 +1,4 @@
-import iconCategory from './src/iconCom/iconCategory.vue'
+import iconMenu from './src/iconCom/iconMenu.vue'
 import iconCircleClose from './src/iconCom/iconCircleClose.vue'
 import iconClose from './src/iconCom/iconClose.vue'
 import iconDownArrow from './src/iconCom/iconDownArrow.vue'
@@ -16,7 +16,7 @@ import iconUserCenter from './src/iconCom/iconUserCenter.vue'
 import iconQuestion from './src/iconCom/iconQuestion.vue'
 
 const tw591SVGIcon = {
-    iconCategory,
+    iconMenu,
     iconCircleClose,
     iconClose,
     iconDownArrow,
@@ -34,7 +34,7 @@ const tw591SVGIcon = {
     iconQuestion
 }
 
-const install = function (Vue) {
+const install = function(Vue) {
     if (install.installed) return
     Object.keys(tw591SVGIcon).forEach(key => {
         Vue.component(key, tw591SVGIcon[key])

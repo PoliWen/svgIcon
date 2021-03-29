@@ -5,9 +5,9 @@
 		<ul class="icon-wrap">
 			<li>
                     <span class="tw591-icon">
-                        <iconCategory />
+                        <iconMenu />
                     </span>
-                    <span class="icon-name">iconCategory</span>
+                    <span class="icon-name">iconMenu</span>
                 </li>
 <li>
                     <span class="tw591-icon">
@@ -106,7 +106,7 @@
 </template>
 
 <script>
-import iconCategory from './iconCom/iconCategory.vue'
+import iconMenu from './iconCom/iconMenu.vue'
 import iconCircleClose from './iconCom/iconCircleClose.vue'
 import iconClose from './iconCom/iconClose.vue'
 import iconDownArrow from './iconCom/iconDownArrow.vue'
@@ -134,7 +134,7 @@ export default {
 		}
 	},
 	components: {
-		iconCategory,iconCircleClose,iconClose,iconDownArrow,iconGotoTop,iconHeart,iconIconPhone,iconLeftArrow,iconRightArrow,iconSearch,iconFilter,iconShare,iconSort,iconUpArrow,iconUserCenter,iconQuestion
+		iconMenu,iconCircleClose,iconClose,iconDownArrow,iconGotoTop,iconHeart,iconIconPhone,iconLeftArrow,iconRightArrow,iconSearch,iconFilter,iconShare,iconSort,iconUpArrow,iconUserCenter,iconQuestion
 	},
 	mounted() {
 		/**

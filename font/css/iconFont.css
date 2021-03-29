@@ -22,66 +22,78 @@
   }
 }
 
-.icon-category:before {
+.icon-circleClose:before {
   content: "\F000";
 }
 
-.icon-circleClose:before {
+.icon-close:before {
   content: "\F001";
 }
 
-.icon-close:before {
+.icon-downArrow:before {
   content: "\F002";
 }
 
-.icon-downArrow:before {
+.icon-filter:before {
   content: "\F003";
 }
 
-.icon-filter:before {
+.icon-gotoTop:before {
   content: "\F004";
 }
 
-.icon-gotoTop:before {
+.icon-heart:before {
   content: "\F005";
 }
 
-.icon-heart:before {
+.icon-iconPhone:before {
   content: "\F006";
 }
 
-.icon-iconPhone:before {
+.icon-leftArrow:before {
   content: "\F007";
 }
 
-.icon-leftArrow:before {
+.icon-menu:before {
   content: "\F008";
 }
 
-.icon-question:before {
+.icon-phone:before {
   content: "\F009";
 }
 
-.icon-rightArrow:before {
+.icon-question:before {
   content: "\F00A";
 }
 
-.icon-search:before {
+.icon-rightArrow:before {
   content: "\F00B";
 }
 
-.icon-share:before {
+.icon-search:before {
   content: "\F00C";
 }
 
-.icon-sort:before {
+.icon-share:before {
   content: "\F00D";
 }
 
-.icon-upArrow:before {
+.icon-sort:before {
   content: "\F00E";
 }
 
-.icon-userCenter:before {
+.icon-top:before {
   content: "\F00F";
+}
+
+.icon-upArrow:before {
+  content: "\F010";
+}
+
+.icon-useCenter:before {
+  content: "\F011";
+}
+
+.icon-userCenter:before {
+  content: "\F012";
 }
