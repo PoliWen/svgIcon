@@ -46,54 +46,43 @@
   content: "\F005";
 }
 
-.icon-iconPhone:before {
+.icon-leftArrow:before {
   content: "\F006";
 }
 
-.icon-leftArrow:before {
+.icon-menu:before {
   content: "\F007";
 }
 
-.icon-menu:before {
+.icon-phone:before {
   content: "\F008";
 }
 
-.icon-phone:before {
+.icon-question:before {
   content: "\F009";
 }
 
-.icon-question:before {
+.icon-rightArrow:before {
   content: "\F00A";
 }
 
-.icon-rightArrow:before {
+.icon-search:before {
   content: "\F00B";
 }
 
-.icon-search:before {
+.icon-share:before {
   content: "\F00C";
 }
 
-.icon-share:before {
+.icon-sort:before {
   content: "\F00D";
 }
 
-.icon-sort:before {
+.icon-upArrow:before {
   content: "\F00E";
 }
 
-.icon-top:before {
+.icon-userCenter:before {
   content: "\F00F";
 }
-
-.icon-upArrow:before {
-  content: "\F010";
-}
-
-.icon-useCenter:before {
-  content: "\F011";
-}
-
-.icon-userCenter:before {
-  content: "\F012";
-}
+

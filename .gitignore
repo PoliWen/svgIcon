@@ -3,6 +3,7 @@ node_modules
 font
 /src/iconCom
 /dist
+svgMin
 
 
 # local env files

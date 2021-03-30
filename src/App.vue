@@ -41,9 +41,9 @@
                 </li>
 <li>
                     <span class="tw591-icon">
-                        <iconIconPhone />
+                        <iconPhone />
                     </span>
-                    <span class="icon-name">iconIconPhone</span>
+                    <span class="icon-name">iconPhone</span>
                 </li>
 <li>
                     <span class="tw591-icon">
@@ -112,7 +112,7 @@ import iconClose from './iconCom/iconClose.vue'
 import iconDownArrow from './iconCom/iconDownArrow.vue'
 import iconGotoTop from './iconCom/iconGotoTop.vue'
 import iconHeart from './iconCom/iconHeart.vue'
-import iconIconPhone from './iconCom/iconIconPhone.vue'
+import iconPhone from './iconCom/iconPhone.vue'
 import iconLeftArrow from './iconCom/iconLeftArrow.vue'
 import iconRightArrow from './iconCom/iconRightArrow.vue'
 import iconSearch from './iconCom/iconSearch.vue'
@@ -134,7 +134,7 @@ export default {
 		}
 	},
 	components: {
-		iconMenu,iconCircleClose,iconClose,iconDownArrow,iconGotoTop,iconHeart,iconIconPhone,iconLeftArrow,iconRightArrow,iconSearch,iconFilter,iconShare,iconSort,iconUpArrow,iconUserCenter,iconQuestion
+		iconMenu,iconCircleClose,iconClose,iconDownArrow,iconGotoTop,iconHeart,iconPhone,iconLeftArrow,iconRightArrow,iconSearch,iconFilter,iconShare,iconSort,iconUpArrow,iconUserCenter,iconQuestion
 	},
 	mounted() {
 		/**

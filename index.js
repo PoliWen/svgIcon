@@ -4,7 +4,7 @@ import iconClose from './src/iconCom/iconClose.vue'
 import iconDownArrow from './src/iconCom/iconDownArrow.vue'
 import iconGotoTop from './src/iconCom/iconGotoTop.vue'
 import iconHeart from './src/iconCom/iconHeart.vue'
-import iconIconPhone from './src/iconCom/iconIconPhone.vue'
+import iconPhone from './src/iconCom/iconPhone.vue'
 import iconLeftArrow from './src/iconCom/iconLeftArrow.vue'
 import iconRightArrow from './src/iconCom/iconRightArrow.vue'
 import iconSearch from './src/iconCom/iconSearch.vue'
@@ -22,7 +22,7 @@ const tw591SVGIcon = {
     iconDownArrow,
     iconGotoTop,
     iconHeart,
-    iconIconPhone,
+    iconPhone,
     iconLeftArrow,
     iconRightArrow,
     iconSearch,

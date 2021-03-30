@@ -5,7 +5,7 @@ const iconCon = [
     'downArrow',
     'gotoTop',
     'heart',
-    'iconPhone',
+    'phone',
     'leftArrow',
     'rightArrow',
     'search',
