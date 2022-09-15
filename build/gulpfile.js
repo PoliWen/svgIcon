@@ -234,3 +234,4 @@ task('default', series('svgClean', 'buildVueCom',
     font,
     genSvgSprite
 ))
+
